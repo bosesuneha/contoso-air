@@ -31,7 +31,10 @@ env:
     CONTAINER_NAME: web
     CLUSTER_NAME: sb-2
     CLUSTER_RESOURCE_GROUP: sunehabose-test-rg
-    DEPLOYMENT_MANIFEST_PATH: k8s/deployment.yaml
+    DEPLOYMENT_MANIFEST_PATH: |
+        src/web/k8s/service.yaml
+        src/web/k8s/configmap.yaml
+        src/web/k8s/deployment.yaml
     DOCKER_FILE: src/web/Dockerfile
     BUILD_CONTEXT_PATH: src/web
     NAMESPACE: default
